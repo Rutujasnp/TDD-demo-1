@@ -7,10 +7,8 @@ public class CalculatorService {
 		if (numbers=="null"|| numbers.isEmpty()) {		//for if the string numbers is empty
 			return 0;
 		}
-//		int result = Integer.parseInt(numbers);		// for single number in string numbers
-//		return result;
-		
-		String arrayOfNumbers[]= numbers.split(",");
+String delimiter=",";
+		String arrayOfNumbers[]= numbers.split(delimiter);
 		int sum=0;
 		for (String str: arrayOfNumbers) {
 			sum+=Integer.parseInt(str.trim());

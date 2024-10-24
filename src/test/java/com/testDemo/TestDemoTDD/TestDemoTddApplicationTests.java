@@ -22,4 +22,10 @@ class TestDemoTddApplicationTests {
 	public void testTwoNumbersReturnsSum() {
 		Assertions.assertEquals(6, CalculatorService.addNums("1,5"));
 	}
+	
+	@Test
+	public void testMultipleNumbersReturnsSum() {
+		Assertions.assertEquals(16, CalculatorService.addNums("1,3,5,7"));
+
+	}
 }
