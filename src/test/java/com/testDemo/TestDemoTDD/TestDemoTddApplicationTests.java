@@ -14,7 +14,12 @@ class TestDemoTddApplicationTests {
 
 }
 	@Test
-	public void testSingleNum() {
-		Assertions.assertEquals(6, CalculatorService.addNums("6"));
+	public void testSingleNumbersreturnsSameNumber() {
+		Assertions.assertEquals(1, CalculatorService.addNums("1"));
+	}
+	
+	@Test
+	public void testTwoNumbersReturnsSum() {
+		Assertions.assertEquals(6, CalculatorService.addNums("1,5"));
 	}
 }
