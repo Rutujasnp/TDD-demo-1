@@ -30,4 +30,10 @@ class TestDemoTddApplicationTests {
 		Assertions.assertEquals(16, CalculatorService.addNums("1,3,5,7"));
 
 	}
+	
+	@Test
+	public void testNewlineDelimiter() {
+		Assertions.assertEquals(6, CalculatorService.addNums("1\n2,3"));
+	}
+	
 }

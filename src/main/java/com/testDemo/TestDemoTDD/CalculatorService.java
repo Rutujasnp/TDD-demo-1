@@ -8,6 +8,7 @@ public class CalculatorService {
 			return 0;
 			
 		}
+		numbers= numbers.replace("\n", ",");
 String delimiter=",";
 		String arrayOfNumbers[]= numbers.split(delimiter);
 		int sum=0;
