@@ -6,12 +6,14 @@ public class CalculatorService {
 
 		if (numbers=="null"|| numbers.isEmpty()) {		//for if the string numbers is empty
 			return 0;
+			
 		}
 String delimiter=",";
 		String arrayOfNumbers[]= numbers.split(delimiter);
 		int sum=0;
 		for (String str: arrayOfNumbers) {
 			sum+=Integer.parseInt(str.trim());
+			
 		}
 		return sum;
 	}
