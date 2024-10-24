@@ -10,11 +10,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 class TestDemoTddApplicationTests {
 	@Test
 	public void testEmptyString() {
-		Assertions.assertEquals(0, CalculatorService.addNums(" "));
+		Assertions.assertEquals(0, CalculatorService.addNums(""));
 
 }
-//	@Test
-//	public void testSingleNum() {
-//		Assertions.assertEquals(6, CalculatorService.addNums("6"));
-//	}
+	@Test
+	public void testSingleNum() {
+		Assertions.assertEquals(6, CalculatorService.addNums("6"));
+	}
 }
