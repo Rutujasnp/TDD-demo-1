@@ -11,11 +11,13 @@ class TestDemoTddApplicationTests {
 	@Test
 	public void testEmptyString() {
 		Assertions.assertEquals(0, CalculatorService.addNums(""));
+		
 
 }
 	@Test
 	public void testSingleNumbersreturnsSameNumber() {
 		Assertions.assertEquals(1, CalculatorService.addNums("1"));
+		
 	}
 	
 	@Test
