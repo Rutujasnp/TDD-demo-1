@@ -36,4 +36,9 @@ class TestDemoTddApplicationTests {
 		Assertions.assertEquals(6, CalculatorService.addNums("1\n2,3"));
 	}
 	
+	@Test
+	public void testCustomDelimiter() {
+		Assertions.assertEquals(3, CalculatorService.addNums("//;\n1;2"));
+	}
+	
 }

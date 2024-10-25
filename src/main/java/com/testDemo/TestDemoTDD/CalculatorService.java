@@ -8,9 +8,11 @@ public class CalculatorService {
 			return 0;
 			
 		}
+		
 		numbers= numbers.replace("\n", ",");
-String delimiter=",";
-		String arrayOfNumbers[]= numbers.split(delimiter);
+		
+		//to add numbers into sum
+		String arrayOfNumbers[]= numbers.split(",");
 		int sum=0;
 		for (String str: arrayOfNumbers) {
 			sum+=Integer.parseInt(str.trim());
