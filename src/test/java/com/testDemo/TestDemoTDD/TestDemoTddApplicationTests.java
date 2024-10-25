@@ -48,6 +48,6 @@ class TestDemoTddApplicationTests {
 	Exception exception=Assertions.assertThrows(IllegalArgumentException.class, ()->{
 			CalculatorService.addNums("-1,2,-3");
 		});
-		assertEquals("negative numbers not allowed: -1,-3", exception.getMessage());
+		assertEquals("Negative numbers not allowed: [-1, -3]", exception.getMessage());
 	}
 }

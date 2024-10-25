@@ -33,17 +33,18 @@ public class CalculatorService {
 		int sum = 0;
 		for (String str : arrayOfNumbers) {
 			int num=Integer.parseInt(str.trim());
-			if(num>0) {
-				sum +=num;
+			if(num<0) {
+				negatives.add(num);
+				
 			}
-//			else {
-//				negatives.add(num);
-//			}
-//
-//		}
-//		if(!negatives.isEmpty()) {
-//			throw new IllegalArgumentException("Negative numbers not allowed: " + negatives);
-//		}
-	//	return sum;
-	}return sum;
-}}
+			else {
+				sum =sum+num;
+			}
+
+		}
+		if(!negatives.isEmpty()) {
+			throw new IllegalArgumentException("Negative numbers not allowed: " + negatives);
+		}
+		return sum;
+	}
+}
