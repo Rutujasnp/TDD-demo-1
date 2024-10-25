@@ -1,5 +1,7 @@
 package com.testDemo.TestDemoTDD;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 import org.assertj.core.api.Assert;
 
 import org.junit.jupiter.api.Assertions;
@@ -41,4 +43,11 @@ class TestDemoTddApplicationTests {
 		Assertions.assertEquals(3, CalculatorService.addNums("//;\n1;2"));
 	}
 	
+	@Test
+	public void testNegativeNumbers() {
+	Exception exception=Assertions.assertThrows(IllegalArgumentException.class, ()->{
+			CalculatorService.addNums("-1,2,-3");
+		});
+		assertEquals("negative numbers not allowed: -1,-3", exception.getMessage());
+	}
 }

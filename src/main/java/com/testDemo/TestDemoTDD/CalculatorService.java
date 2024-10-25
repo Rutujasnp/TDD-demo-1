@@ -1,5 +1,8 @@
 package com.testDemo.TestDemoTDD;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CalculatorService {
 
 	public static int addNums(String numbers) {
@@ -22,13 +25,25 @@ public class CalculatorService {
 
 		// numbers= numbers.replace("\n", ",");
 
+		//arraylist to store negative numbers
+		List<Integer> negatives= new ArrayList<>();
+		
 		// to add numbers into sum
 		String arrayOfNumbers[] = numbers.split(delimiter);
 		int sum = 0;
 		for (String str : arrayOfNumbers) {
-			sum += Integer.parseInt(str.trim());
-
-		}
-		return sum;
-	}
-}
+			int num=Integer.parseInt(str.trim());
+			if(num>0) {
+				sum +=num;
+			}
+//			else {
+//				negatives.add(num);
+//			}
+//
+//		}
+//		if(!negatives.isEmpty()) {
+//			throw new IllegalArgumentException("Negative numbers not allowed: " + negatives);
+//		}
+	//	return sum;
+	}return sum;
+}}
